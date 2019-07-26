@@ -1,0 +1,23 @@
+<core:FragmentDefinition xmlns:layout="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns="sap.m">
+	<Dialog id="dlgUpdate" title="Update Vaccination">
+		<content>
+			<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12"
+				adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1"
+				singleContainerFullSize="false">
+				<f:content>
+					<Label text="Territory" />
+					<Input value="{view>TerritoryID}"/>
+					<Label text="TerritoryDescription" required="true" />
+					<Input value="{view>TerritoryDescription}" />
+					<Label text="RegionID" required="true" />
+					<Input value="{view>RegionID}" />
+				</f:content>
+			</f:SimpleForm>
+		</content>
+		<buttons>
+			<Button text="Update" press="onUpdate"
+			/>
+			<Button text="Cancel" press="onCancelUpdate"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>
